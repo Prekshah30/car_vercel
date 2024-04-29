@@ -41,7 +41,7 @@ export interface FilterProps{
 
 export interface OptionProps{
     title:string;
-    value:string;
+    value:string | number;
     type:string;
 }
 

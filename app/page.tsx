@@ -28,8 +28,8 @@ export default async function Home({ searchParams }: {searchParams: any} ) {
           <SerachBar />
 
           <div className='home__filter-container'>
-            <CustomFilter title='fuel' options={fuels} />
-            <CustomFilter title='year' options={yearsOfProduction} />
+            <CustomFilter title='fuel' options={fuels.map(fuel => ({ title: String(fuel), value: String(fuel), type: 'fuel' }))} />
+            <CustomFilter title='year' options={yearsOfProduction.map(year => ({ title: String(year), value: String(year), type: 'year' }))} />
           </div>
         </div>
 
